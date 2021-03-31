@@ -18,19 +18,6 @@ public:
         a = a ^ b;
     }
 
-    static void fizz_buzz(const std::vector<int>& arr) {
-        std::for_each(std::begin(arr), std::end(arr), [](auto n) {
-            std::cout << n << ":";
-
-            if ((n % 3) == 0)
-                std::cout << "Fizz";
-            if ((n % 5) == 0)
-                std::cout << "Buzz";
-
-            std::cout << std::endl;
-            });
-    }
-
     // Time complexity: O(n/2)
     static bool is_palindrome(const std::string str) {
         const size_t len{ str.length() };
@@ -42,18 +29,6 @@ public:
         }
 
         return true;
-    }
-
-    // Time complexity: O(n/2)
-    static std::string reverse_string(const std::string& str) {
-        auto reversed{ str };
-        const auto len{ reversed.length() };
-
-        for (size_t i = 0; i < len / 2; ++i) {
-            std::swap(reversed[i], reversed[len - i - 1]);
-        }
-
-        return reversed;
     }
 
     //    template <typename T>
@@ -112,24 +87,12 @@ public:
             std::cout << (Test::is_palindrome(i) ? "Yes" : "No") << std::endl;
             });
 
-        std::cout << "-- Reverse string ---" << std::endl;
-        std::vector<std::string> r_strs{ "123456", "4567890" };
-        std::for_each(std::begin(r_strs), std::end(r_strs), [](auto i) {
-            std::cout << i << " -> ";
-            std::cout << Test::reverse_string(i) << std::endl;
-            });
-
         std::cout << "-- n! recursion ---" << std::endl;
         std::cout << Test::factorial_recursion(5) << std::endl;
 
         std::cout << "-- Remove duplicates in array (using hash set) ---" << std::endl;
         std::unordered_set<int> dup_set{ 1, 2, 3, 3, 5 };
         helper::out_each(std::cout, dup_set) << std::endl;
-
-        //std::cout << "-- Fizz Buzz ---" << std::endl;
-        //std::vector<int> fizz_buzz_arr(100);
-        //std::iota(begin(fizz_buzz_arr), end(fizz_buzz_arr), 1);
-        //Test::fizz_buzz(fizz_buzz_arr);
 
         std::cout << "-- Sum (formula) ---" << std::endl;
         std::cout << "Sum: " << Test::sum_formula(100) << std::endl;
