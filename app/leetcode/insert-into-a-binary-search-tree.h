@@ -13,23 +13,13 @@
  */
 class Solution {
 public:
-    TreeNode* findNode(TreeNode* parent, int val) const {
-        auto child = (val < parent->val) ? parent->left : parent->right;
-        if (child == nullptr) {
-            return parent;
-        }
-
-        return findNode(child, val);
-    }    
-    
     TreeNode* insertIntoBST(TreeNode* root, int val) {
-        if (root == nullptr) {
+        if (root == nullptr)
             return new TreeNode(val);
-        }
 
-        auto parent = findNode(root, val);
-        auto child = (val < parent->val) ? &parent->left : &parent->right;
-        *child = new TreeNode(val);
+        auto next_node = (val < root->val) ? &root->left : &root->right;
+        *next_node = insertIntoBST(*next_node, val);
+        
         return root;
     }
 };
