@@ -14,14 +14,8 @@
 class Solution {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {
-        if (root == nullptr) {
-            return nullptr;
-        }
-        
-        if (root->val == val) {
-            return root;
-        }
-        
+        if (root == nullptr || root->val == val)
+            return root; // nullptr or root
         return searchBST(val < root->val ? root->left : root->right, val);
     }
 };
