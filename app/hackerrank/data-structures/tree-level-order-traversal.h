@@ -14,18 +14,18 @@ class Node {
 };
 */
 
-     void levelOrder(Node * root) {
-        if (root == nullptr) {
-            return;
-        }
-        
-        std::queue<Node*> q;
-        q.push(root);
-        
-        while (!q.empty()) {
-            auto node = q.front();
-            q.pop();
-            std::cout << node->data << " ";
-            if (node->left) q.push(node->left);
-            if (node->right) q.push(node->right);
-        }
+void levelOrder(Node* root) {
+    if (root == nullptr) {
+        return;
+    }
+
+    std::queue<Node*> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        auto node = q.front();
+        q.pop();
+        std::cout << node->data << " ";
+        if (node->left) q.push(node->left);
+        if (node->right) q.push(node->right);
+    }

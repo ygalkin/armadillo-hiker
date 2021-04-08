@@ -12,7 +12,7 @@ class Solution {
 public:
     // Space complexity: O(1).
     // Floyd's cycle-detection algorithm (tortoise and hare)
-    bool hasCycle(ListNode *head) {
+    bool hasCycle(ListNode* head) {
         if (head == nullptr) {
             return false;
         }
@@ -23,7 +23,7 @@ public:
         while (fast != nullptr && fast->next != nullptr) {
             slow = slow->next;
             fast = fast->next->next;
-            
+
             if (fast == slow) {
                 return true;
             }

@@ -19,7 +19,7 @@ public:
 
         auto next_node = (val < root->val) ? &root->left : &root->right;
         *next_node = insertIntoBST(*next_node, val);
-        
+
         return root;
     }
 };

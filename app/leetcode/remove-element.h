@@ -8,9 +8,9 @@ public:
             return 0;
         }
         const auto size = nums.size();
-        int i{0};
+        int i{ 0 };
         int j = size - 1;
-        
+
         while (i <= j) {
             if (nums[i] == val) {
                 if (nums[j] != val) {
@@ -18,14 +18,14 @@ public:
                     i++;
                     --j;
                     continue;
-                } 
+                }
                 --j;
                 continue;
             }
-            
+
             ++i;
         }
-        
+
         return i;
     }
 };

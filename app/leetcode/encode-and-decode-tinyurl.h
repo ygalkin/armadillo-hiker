@@ -19,7 +19,7 @@ public:
             // save hash and long URL into the table
             _lookup_tbl.insert(std::pair(hash, longUrl));
         }
-        
+
         return "http://tinyurl.com/" + std::to_string(hash);
     }
 
@@ -30,17 +30,17 @@ public:
         if (pos == string::npos) {
             return {};
         }
-        
+
         // extract hash value from the URL
         auto str_hash = shortUrl.substr(pos + 1);
         size_t hash = std::stoul(str_hash);
-        
+
         // find long URL by hash value in the lookup table
         auto iter = _lookup_tbl.find(hash);
         if (iter == end(_lookup_tbl)) {
             return {};
-        }        
-        
+        }
+
         // return long URL
         return iter->second;
     }

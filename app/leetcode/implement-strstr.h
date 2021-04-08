@@ -7,12 +7,12 @@ public:
         if (needle.empty()) {
             return 0;
         }
-        
+
         if (haystack.size() < needle.size()) {
             return -1;
         }
-        
-        for (size_t i = 0; i <= haystack.size() - needle.size() ; ++i) {
+
+        for (size_t i = 0; i <= haystack.size() - needle.size(); ++i) {
             if (haystack[i] == needle[0]) {
                 size_t j = 1;
                 for (; j < needle.size(); ++j) {
@@ -20,14 +20,14 @@ public:
                         break;
                     }
                 }
-                
+
                 if (j == needle.size()) {
                     return i;
-                }              
+                }
             }
         }
-        
-        return -1;        
+
+        return -1;
     }
 };
 

@@ -8,14 +8,14 @@ public:
         // for (auto ch : s) n ^= ch; 
         // for (auto ch : t) n ^= ch;
         // return n;
-        
+
         // optimized solution max number of total iterations (s.length)
         // constrains: t.length == s.length + 1
-        auto n{t[t.size() - 1]};
+        auto n{ t[t.size() - 1] };
         for (size_t i = 0; i < s.size(); ++i) {
             n ^= (s[i] ^ t[i]);
         }
-        
+
         return n;
     }
 };

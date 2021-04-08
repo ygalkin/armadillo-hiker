@@ -22,10 +22,10 @@ namespace hackerrank {
             auto pairs{ 0 };
 
             std::for_each(std::begin(ar), std::end(ar), [&s, &pairs](auto i) {
-                    if (s.test((size_t)i - 1)) {
-                        ++pairs;
-                    }
-                    s.flip((size_t)i - 1);
+                if (s.test((size_t)i - 1)) {
+                    ++pairs;
+                }
+                s.flip((size_t)i - 1);
                 });
 
             return pairs;

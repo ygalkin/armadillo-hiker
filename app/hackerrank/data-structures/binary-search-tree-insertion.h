@@ -13,12 +13,12 @@ class Node {
         }
 };
 */
-    Node * insert(Node * root, int data) {
-        if (root == nullptr)
-            return new Node(data);
+Node* insert(Node* root, int data) {
+    if (root == nullptr)
+        return new Node(data);
 
-        auto next_node = (data < root->data) ? &root->left : &root->right;
-        *next_node = insert(*next_node, data);
-        
-        return root;
-    }
+    auto next_node = (data < root->data) ? &root->left : &root->right;
+    *next_node = insert(*next_node, data);
+
+    return root;
+}

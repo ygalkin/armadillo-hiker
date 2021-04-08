@@ -14,8 +14,8 @@ namespace leetcode {
 
     public:
         two_sum() = default;
-        two_sum(const two_sum & other) = default;
-        two_sum& operator = (const two_sum & other) = default;
+        two_sum(const two_sum& other) = default;
+        two_sum& operator = (const two_sum& other) = default;
         ~two_sum() = default;
 
         // Time complexity: O(n) - linear. One-phase loop.

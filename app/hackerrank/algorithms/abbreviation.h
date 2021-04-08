@@ -64,8 +64,8 @@ namespace hackerrank {
 
     public:
         abbreviation() = default;
-        abbreviation(const abbreviation & other) = default;
-        abbreviation& operator = (const abbreviation & other) = default;
+        abbreviation(const abbreviation& other) = default;
+        abbreviation& operator = (const abbreviation& other) = default;
         ~abbreviation() = default;
 
         bool task(const std::string& a, const std::string& b) {

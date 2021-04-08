@@ -10,11 +10,11 @@ public:
             n = n / 10;
             digits[i] = reminder;
         }
-        
+
         if (n > 0) {
             digits.insert(begin(digits), n);
         }
-        
+
         return digits;
     }
 };

@@ -28,7 +28,7 @@ public:
         quick_sort(first, bound);
         quick_sort(bound + 1, last);
     }
-    
+
     vector<int> sortArray(vector<int>& nums) {
         quick_sort(std::begin(nums), std::end(nums));
         return nums;
@@ -50,7 +50,7 @@ public:
         quick_sort(first, bound1);
         quick_sort(bound2, last);
     }
-    
+
     vector<int> sortArray(vector<int>& nums) {
         quick_sort(std::begin(nums), std::end(nums));
         return nums;

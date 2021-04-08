@@ -5,9 +5,9 @@ public:
     int reverse(int x) {
         const auto MAX = numeric_limits<int>::max();
         const auto MIN = numeric_limits<int>::min();
-        
+
         int n = 0;
-        
+
         while (x != 0) {
             int b = x % 10;
             x = x / 10;
@@ -16,10 +16,10 @@ public:
             if (n > (MAX / 10) || n < (MIN / 10)) {
                 return 0;
             }
-            
+
             n = n * 10 + b;
         }
-        
+
         return n;
     }
 };

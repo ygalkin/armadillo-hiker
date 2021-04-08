@@ -5,10 +5,10 @@
 // XOR solution
 int lonelyinteger(vector<int> a) {
     auto n = 0;
-   
+
     for (const auto& i : a) {
-        n ^= i; 
+        n ^= i;
     }
-    
+
     return n;
 }

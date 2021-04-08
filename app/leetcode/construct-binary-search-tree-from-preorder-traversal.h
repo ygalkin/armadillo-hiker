@@ -20,11 +20,11 @@ public:
         }
 
         insertIntoBST((val < (*node)->val) ? &(*node)->left : &(*node)->right, val);
-    }    
-    
+    }
+
     TreeNode* bstFromPreorder(vector<int>& preorder) {
-        TreeNode* root{nullptr};
-        for (auto& val : preorder) 
+        TreeNode* root{ nullptr };
+        for (auto& val : preorder)
             insertIntoBST(&root, val);
         return root;
     }

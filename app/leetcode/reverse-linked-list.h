@@ -11,19 +11,19 @@
  * };
  */
 
-// Recursive solution
+ // Recursive solution
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
         if (head == nullptr) {
             return nullptr;
         }
-        
+
         ListNode* new_head = nullptr;
         reverseList_recursive(head, &new_head)->next = nullptr;
         return new_head;
     }
-    
+
     ListNode* reverseList_recursive(ListNode* head, ListNode** new_head) {
         head->next == nullptr ? *new_head = head : reverseList_recursive(head->next, new_head)->next = head;
         return head;
@@ -37,16 +37,16 @@ public:
         if (head == nullptr) {
             return nullptr;
         }
-        
+
         ListNode* current = head;
         ListNode* prev = nullptr;
-        while(current != nullptr) {
+        while (current != nullptr) {
             ListNode* next = current->next;
             current->next = prev;
             prev = current;
             current = next;
         }
-        
+
         return prev;
     }
 };
