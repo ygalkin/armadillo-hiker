@@ -12,14 +12,14 @@
 
 class Test {
 public:
-    static void swap_xor(int& a, int& b) {
+    void swap_xor(int& a, int& b) {
         a = a ^ b;
         b = a ^ b;
         a = a ^ b;
     }
 
     // Time complexity: O(n/2)
-    static bool is_palindrome(const std::string str) {
+    bool is_palindrome(const std::string str) {
         const size_t len{ str.length() };
 
         for (size_t i = 0; i < len / 2; ++i) {
@@ -37,24 +37,24 @@ public:
     //    }
 
     // Time compexity: O(n) - linear
-    static unsigned int factorial_recursion(unsigned int n) {
+    unsigned int factorial_recursion(unsigned int n) {
         return n == 1 ? 1 : n * factorial_recursion(n - 1);
     }
 
     // Time complexity: O(1) - constant
     // Gauss formula
     template <typename T>
-    static inline T sum_formula(T n) {
+    inline T sum_formula(T n) {
         return (n * (n + 1)) / 2;
     }
 
     // Time complexity: O(n) - linear
     template <typename T>
-    static T sum_recursion(T n) {
+    T sum_recursion(T n) {
         return n == 1 ? 1 : n + sum_recursion(n - 1);
     }
 
-    static void money(unsigned int m) {
+    void money(unsigned int m) {
         const unsigned int arr[]{ 25, 10, 5, 1 };
 
         auto i{ 0 };
@@ -68,7 +68,7 @@ public:
         }
     }
 
-    static unsigned int bit_count(unsigned int n) {
+    unsigned int bit_count(unsigned int n) {
         auto count{ 0 };
 
         while (n > 0) {
@@ -79,7 +79,7 @@ public:
         return count;
     }
 
-    static void run() {
+    void run() {
         std::cout << "-- Test if string is palindrome ---" << std::endl;
         std::vector<std::string> pal_strs{ "12321", "hello" };
         std::for_each(std::begin(pal_strs), std::end(pal_strs), [](auto i) {
@@ -115,4 +115,3 @@ public:
         std::cout << "After swap: " << a1 << " " << b1 << std::endl;
     }
 };
-

@@ -13,7 +13,7 @@ const int _ = [] {
 }();
 
 int main() {
-    Test::run();
+    Test().run();
     hackerrank::test::run();
     leetcode::test::run();
 }

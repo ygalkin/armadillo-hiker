@@ -12,7 +12,7 @@ namespace helper {
         os << "}";
         return os;
     }
-    
+
     // https://www.techiedelight.com/use-std-pair-key-std-unordered_map-cpp/
     struct pair_hash
     {
