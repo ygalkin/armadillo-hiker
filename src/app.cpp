@@ -1,4 +1,3 @@
-#include "test.h"
 #include "hackerrank/test.h"
 #include "leetcode/test.h"
 
@@ -13,7 +12,6 @@ const int _ = [] {
 }();
 
 int main() {
-    Test().run();
     hackerrank::test::run();
     leetcode::test::run();
 }
