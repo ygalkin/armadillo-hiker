@@ -1,4 +1,4 @@
-# armadillo-hiker
+# coding-challenges
 
 My leetcode.com and hackerrank.com coding challenges solutions.
 
