@@ -12,6 +12,6 @@ const int _ = [] {
 }();
 
 int main() {
-    hackerrank::test::run();
-    leetcode::test::run();
+    hackerrank::test().run();
+    leetcode::test().run();
 }

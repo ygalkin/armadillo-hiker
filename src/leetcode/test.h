@@ -2,8 +2,6 @@
 
 #include "two-sum.h"
 
-//#include "../helper.h"
-
 #include <iostream>
 #include <map>
 #include <vector>
@@ -12,18 +10,18 @@
 namespace leetcode {
     class test {
     public:
-        test() = delete;
+        test() = default;
         test(const test& other) = delete;
         test& operator = (const test& other) = delete;
-        ~test() = delete;
+        ~test() = default;
 
-        static void run() {
+        void run() const {
             test_two_sum();
         }
 
     private:
 
-        static void test_two_sum() {
+        void test_two_sum() const {
             std::cout << "--- Two Sum ---" << std::endl;
 
             std::map<std::pair<std::vector<int>, int>, std::vector<int>> test_cases = {

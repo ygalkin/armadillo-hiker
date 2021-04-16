@@ -155,7 +155,6 @@
     <ClInclude Include="hackerrank\algorithms\abbreviation.h" />
     <ClInclude Include="hackerrank\algorithms\sales-by-match.h" />
     <ClInclude Include="hackerrank\test.h" />
-    <ClInclude Include="helper.h" />
     <ClInclude Include="leetcode\test.h" />
     <ClInclude Include="leetcode\two-sum.h" />
   </ItemGroup>

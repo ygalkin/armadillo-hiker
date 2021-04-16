@@ -11,19 +11,19 @@
 namespace hackerrank {
     class test {
     public:
-        test() = delete;
+        test() = default;
         test(const test& other) = delete;
         test& operator = (const test& other) = delete;
-        ~test() = delete;
+        ~test() = default;
 
-    static void run() {
-        test_sales_by_match();
-        test_abbreviation();
-    }
+        void run() const {
+            test_sales_by_match();
+            test_abbreviation();
+        }
 
     private:
 
-        static void test_sales_by_match() {
+        void test_sales_by_match() const {
             std::cout << "--- Sales By Match ---" << std::endl;
 
             std::map<std::pair<std::vector<int>, int>, int> test_cases = {
@@ -40,7 +40,7 @@ namespace hackerrank {
                 });
         }
 
-        static void test_abbreviation() {
+        void test_abbreviation() const {
             std::cout << "--- Dynamic Programming: Abbreviation ---" << std::endl;
 
             std::map<std::pair<std::string, std::string>, bool> test_cases = {
