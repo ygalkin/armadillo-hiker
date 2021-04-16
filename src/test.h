@@ -82,13 +82,13 @@ public:
     void run() {
         std::cout << "-- Test if string is palindrome ---" << std::endl;
         std::vector<std::string> pal_strs{ "12321", "hello" };
-        std::for_each(std::begin(pal_strs), std::end(pal_strs), [](auto i) {
+        std::for_each(std::begin(pal_strs), std::end(pal_strs), [this](auto i) {
             std::cout << i << " -> ";
-            std::cout << (Test::is_palindrome(i) ? "Yes" : "No") << std::endl;
+            std::cout << (is_palindrome(i) ? "Yes" : "No") << std::endl;
             });
 
         std::cout << "-- n! recursion ---" << std::endl;
-        std::cout << Test::factorial_recursion(5) << std::endl;
+        std::cout << factorial_recursion(5) << std::endl;
 
         std::cout << "-- Remove duplicates in array (using hash set) ---" << std::endl;
         std::unordered_set<int> dup_set{ 1, 2, 3, 3, 5 };
@@ -98,7 +98,7 @@ public:
         std::cout << "Sum: " << Test::sum_formula(100) << std::endl;
 
         std::cout << "-- Sum (recursion) ---" << std::endl;
-        std::cout << "Sum: " << Test::sum_recursion(100) << std::endl;
+        std::cout << "Sum: " << sum_recursion(100) << std::endl;
 
         std::cout << "-- Money task ---" << std::endl;
         Test::money(100);
