@@ -12,7 +12,9 @@ namespace leetcode {
     public:
         test() = default;
         test(const test& other) = delete;
+        test(test&& other) = delete;
         test& operator = (const test& other) = delete;
+        test& operator = (test&& other) = delete;
         ~test() = default;
 
         void run() const {
