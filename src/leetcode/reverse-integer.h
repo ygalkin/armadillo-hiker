@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/reverse-integer/submissions/
+// https://leetcode.com/problems/reverse-integer/
 
 class Solution {
 public:

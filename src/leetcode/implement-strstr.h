@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/implement-strstr/submissions/
+// https://leetcode.com/problems/implement-strstr/
 
 // Naive Algorithm for Pattern Searching
 class Solution {
