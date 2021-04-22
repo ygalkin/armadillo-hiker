@@ -12,15 +12,13 @@ private:
 
     unique_ptr<trie_node> _root;
 
-    const trie_node* _search(string word) const {
+    const trie_node* _search(const string& word) const {
         trie_node* node = _root.get();
 
         for (const auto ch : word) {
-            const auto i = 'z' - ch;
-
-            if (node->_children.count(i) == 0)
+            if (node->_children.count(ch) == 0)
                 return nullptr;
-            node = node->_children[i].get();
+            node = node->_children[ch].get();
         }
 
         return node;
@@ -36,11 +34,9 @@ public:
         trie_node* node = _root.get();
 
         for (const auto ch : word) {
-            const auto i = 'z' - ch;
-
-            if (node->_children.count(i) == 0)
-                node->_children[i] = make_unique<trie_node>();
-            node = node->_children[i].get();
+            if (node->_children.count(ch) == 0)
+                node->_children[ch] = make_unique<trie_node>();
+            node = node->_children[ch].get();
         }
 
         node->_is_complete_word = true;
